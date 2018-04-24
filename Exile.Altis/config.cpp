@@ -2271,8 +2271,7 @@ class CfgExileArsenal
 	class Exile_Item_Vishpirin						{ quality = 3; price = 300; };
 	class Exile_Item_Bandage	                    { quality = 2; price = 100; };
 	class Exile_Item_Heatpack	                    { quality = 1; price = 50; };
-
-	//class Exile_Item_Defibrillator				{ quality = 1; price = 7500; };
+	class Exile_Item_Defibrillator					{ quality = 1; price = 7500; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Tools
@@ -3577,6 +3576,8 @@ class CfgExileCustomCode
 	ExileClient_gui_selectSpawnLocation_event_onListBoxSelectionChanged = "xs\spawn\Overwrites\ExileClient_gui_selectSpawnLocation_event_onListBoxSelectionChanged.sqf";
 	ExileServer_object_player_createBambi = "xs\spawn\Overwrites\ExileServer_object_player_createBambi.sqf";
 	Exileclient_system_lootmanager_thread_spawn = "EBM\exileclient_system_lootmanager_thread_spawn.sqf";
+	ExileClient_object_player_death_startBleedingOut = "custom\EnigmaRevive\ExileClient_object_player_death_startBleedingOut.sqf"; //Happys Revive
+	ExileClient_object_player_event_onInventoryOpened = "custom\EnigmaRevive\ExileClient_object_player_event_onInventoryOpened.sqf"; //Happys Revive AntiDupe ---NEW with v0.65
 	
 }; 
 class CfgExileEnvironment
@@ -4564,12 +4565,21 @@ class CfgInteractionMenus
 				action = "_this call ExileClient_object_handcuffs_searchGear";
 			};
 
-			class Identify: ExileAbstractAction
-			{
-				title = "Identify Body";
-				condition = "!(alive ExileClientInteractionObject)";
-				action = "_this call ExileClient_object_player_identifyBody";
-			};
+		class Identify: ExileAbstractAction
+		{
+			title = "Identify Body";
+			condition = "!(alive ExileClientInteractionObject)";
+			action = "_this call ExileClient_object_player_identifyBody";
+		};
+		
+		//////////////Added by [_ZEN_]happydayz/////////////////
+		
+		class Revive: ExileAbstractAction
+		{
+			title = "Perform CPR";
+			condition = "(!(alive ExileClientInteractionObject) && (ExileClientInteractionObject getVariable ['EnigmaRevivePermitted', true]) && (magazines player find 'Exile_Item_Defibrillator' >= 0))";
+			action = "_this spawn Enigma_RevivePlyr";
+		};	
 			
 			class HideCorpse: ExileAbstractAction
 			{
@@ -5842,10 +5852,8 @@ class CfgTraderCategories
 			"Exile_Item_InstaDoc",
 			"Exile_Item_Bandage",
 			"Exile_Item_Vishpirin",
-			"Exile_Item_Heatpack"
-
-			// Not available in 0.9.4!
-			//"Exile_Item_Defibrillator"
+			"Exile_Item_Heatpack",
+			"Exile_Item_Defibrillator"
 		};
 	};
 
