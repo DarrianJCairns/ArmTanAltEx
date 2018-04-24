@@ -4036,7 +4036,23 @@ class CfgInteractionMenus
 				condition = "((locked ExileClientInteractionObject) isEqualTo 2) && ((locked ExileClientInteractionObject) != 1)";
 				action = "false spawn ExileClient_object_lock_toggle";
 			};
-
+			
+			//Claim Vehicle
+			class ClaimVehicle: ExileAbstractAction
+			{
+				title = "Claim Ownership";
+				condition = "true";
+				action = "call ExileClient_ClaimVehicles_network_claimRequestSend";
+			};
+			
+			// Salvage a vehicle
+            class Salvage: ExileAbstractAction
+            {
+                title = "Salvage Vehicle";
+                condition = "(!(alive (ExileClientInteractionObject)))";
+                action = "_this call SV_fnc_SalvageVehicle";
+            };
+			
 			// Repairs a vehicle to 100%. Requires Duckttape
 			class Repair: ExileAbstractAction
 			{
@@ -4109,7 +4125,15 @@ class CfgInteractionMenus
 				condition = "((locked ExileClientInteractionObject) isEqualTo 2) && ((locked ExileClientInteractionObject) != 1)";
 				action = "false spawn ExileClient_object_lock_toggle";
 			};
-
+			
+			// Claim Vehicle
+			class ClaimVehicle: ExileAbstractAction
+			{
+				title = "Claim Ownership";
+				condition = "true";
+				action = "call ExileClient_ClaimVehicles_network_claimRequestSend";
+			};
+			
 			// Hot-wires a vehicle
 			class Hotwire: ExileAbstractAction
 			{

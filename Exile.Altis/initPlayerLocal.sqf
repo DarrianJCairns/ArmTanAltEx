@@ -506,3 +506,6 @@ call ExileClient_object_trader_create;
     187.428
 ]
 call ExileClient_object_trader_create;
+
+[] execVM "ClaimVehicles_Client\ClaimVehicles_Client_init.sqf";
+SV_fnc_SalvageVehicle = compileFinal preprocessFileLineNumbers "custom\SalvageVehicle\SalvageVehicle.sqf";
