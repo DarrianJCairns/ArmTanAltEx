@@ -1793,7 +1793,11 @@ class CfgExileCustomCode
 	ExileServer_object_player_createBambi = "xs\spawn\Overwrites\ExileServer_object_player_createBambi.sqf";
 	Exileclient_system_lootmanager_thread_spawn = "EBM\exileclient_system_lootmanager_thread_spawn.sqf";
 	ExileClient_object_player_death_startBleedingOut = "custom\EnigmaRevive\ExileClient_object_player_death_startBleedingOut.sqf"; //Happys Revive
-	ExileClient_object_player_event_onInventoryOpened = "custom\EnigmaRevive\ExileClient_object_player_event_onInventoryOpened.sqf"; //Happys Revive AntiDupe ---NEW with v0.65
+	ExileClient_object_player_event_onInventoryOpened = "custom\EnigmaRevive\ExileClient_object_player_event_onInventoryOpened.sqf"; //Happys Revive AntiDupe
+	//PTWS
+	ExileServer_system_weather_initialize = "custom\PTWS\ExileServer_system_weather_initialize.sqf";
+	ExileClient_object_player_stats_updateTemperature = "custom\PTWS\ExileClient_object_player_stats_updateTemperature.sqf";
+	ExileClient_system_snow_thread_update = "custom\PTWS\ExileClient_system_snow_thread_update.sqf";
 	
 }; 
 class CfgExileEnvironment
