@@ -27,7 +27,7 @@ class Land_BagFence_Long_F_Kit								{ quality = 1; price = 10000;sellPrice = 5
 class Land_HBarrierTower_F_Kit								{ quality = 1; price = 75000;sellPrice = 50;  };
 class Land_Metal_wooden_rack_F_Kit							{ quality = 1; price = 38000;sellPrice = 50;  };
 class Land_BagBunker_Small_F_Kit							{ quality = 1; price = 65000;sellPrice = 50;  };
-class Land_Bunker_F_Kit										{ quality = 1; price = 750000;sellPrice = 50;  };
+class Land_Bunker_F_Kit										{ quality = 6; price = 750000;sellPrice = 50;  };
 class Land_HBarrierWall_corner_F_Kit						{ quality = 1; price = 50000;sellPrice = 50;  };
 class Land_HBarrierWall6_F_Kit								{ quality = 1; price = 60000;sellPrice = 50;  };
 class Land_HBarrierWall4_F_Kit								{ quality = 1; price = 35000;sellPrice = 50;  };
@@ -51,7 +51,7 @@ class Land_Wall_Tin_4_Kit									{ quality = 1; price = 50000;sellPrice = 50;  
 ///////////////////////// V0.1.2
 class Land_Tank_rust_F_Kit									{ quality = 1; price = 50000;sellPrice = 50;  };
 class Land_ShelvesMetal_F_Kit								{ quality = 1; price = 50000;sellPrice = 50;  };
-class Land_Cargo_Tower_V2_F_Kit								{ quality = 1; price = 750000;sellPrice = 50;  };
+class Land_Cargo_Tower_V2_F_Kit								{ quality = 6; price = 750000;sellPrice = 50;  };
 class Land_FuelStation_Feed_F_Kit							{ quality = 1; price = 220000;sellPrice = 50;  };
 class Land_BagBunker_Large_F_Kit							{ quality = 1; price = 100000;sellPrice = 50;  };
 class ShootingPos_F_Kit										{ quality = 1; price = 1000;sellPrice = 50;  };
@@ -105,10 +105,10 @@ class Land_i_Addon_03_V1_F_Kit								{ quality = 1; price = 50000;sellPrice = 5
 class Land_i_Addon_03mid_V1_F_Kit							{ quality = 1; price = 50000;sellPrice = 50;  }; //Tavernmiddle
 class Land_LampStreet_F_Kit									{ quality = 1; price = 30000;sellPrice = 50;  };
 ///////////////////////// V0.1.9
-class Land_Dome_Big_F_Kit									{ quality = 1; price = 300000;sellPrice = 50;  };
-class Land_Hangar_F_Kit										{ quality = 1; price = 500000;sellPrice = 50;  };
+class Land_Dome_Big_F_Kit									{ quality = 6; price = 300000;sellPrice = 50;  };
+class Land_Hangar_F_Kit										{ quality = 6; price = 500000;sellPrice = 50;  };
 class Land_Metal_Shed_F_Kit									{ quality = 1; price = 30000;sellPrice = 50;  };
-class Land_spp_Tower_F_Kit									{ quality = 1; price = 700000;sellPrice = 50;  };
+class Land_spp_Tower_F_Kit									{ quality = 6; price = 700000;sellPrice = 50;  };
 class Land_Sun_chair_F_Kit									{ quality = 1; price = 5000;sellPrice = 50;  };
 class Land_Sunshade_04_F_Kit								{ quality = 1; price = 5000;sellPrice = 50;  };
 class Land_LampShabby_F_Kit									{ quality = 1; price = 20000;sellPrice = 50;  };
