@@ -1,0 +1,28 @@
+/**
+ * ExileClient_gui_hud_toggleCombatIcon
+ *
+ * Exile Mod
+ * www.exilemod.com
+ * © 2015 Exile Mod Team
+ *
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+ * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ */
+ 
+private["_display", "_icon"];
+disableSerialization;
+_display = uiNamespace getVariable "RscExileHUD";
+_icon = _display displayCtrl 1008;
+if (_this && {!(player getVariable ["ExileIsInCombat", false])}) then
+{
+    player setVariable ["ExileIsInCombat", true, true];
+}
+else
+{
+    if (!(_this) && {player getVariable["ExileIsInCombat", false]}) then
+    {
+        player setVariable ["ExileIsInCombat", nil, true];
+    };
+};
+_icon ctrlShow _this;
+true

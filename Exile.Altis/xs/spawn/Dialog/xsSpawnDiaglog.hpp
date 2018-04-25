@@ -31,7 +31,7 @@ class xstremeGroundorHaloDialog
 			y = 0.054 * safezoneH + safezoneY;
 			w = 0.156 * safezoneW;
 			h = 0.156 * safezoneH;
-			text = "xs\spawn\xslogo.paa";
+			text = "";
 		};
 		class xsSpawnHalo: xsSpawnRscButton
 		{

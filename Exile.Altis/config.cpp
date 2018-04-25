@@ -1798,6 +1798,7 @@ class CfgExileCustomCode
 	ExileServer_system_weather_initialize = "custom\PTWS\ExileServer_system_weather_initialize.sqf";
 	ExileClient_object_player_stats_updateTemperature = "custom\PTWS\ExileClient_object_player_stats_updateTemperature.sqf";
 	ExileClient_system_snow_thread_update = "custom\PTWS\ExileClient_system_snow_thread_update.sqf";
+	ExileClient_gui_hud_toggleCombatIcon = "custom\fixes\ExileClient_gui_hud_toggleCombatIcon.sqf";
 	
 }; 
 class CfgExileEnvironment
